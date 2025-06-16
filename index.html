@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><script>window.huggingface={variables:{"SPACE_CREATOR_USER_ID":"681be8cb184b22f91b04e103"}};</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinion - Conectando Inovação ao Campo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2F3.bp.blogspot.com%2F-D0tf78haVtY%2FT3RiYvpLagI%2FAAAAAAAAAII%2F0vKk-k3oaQs%2Fs1600%2FCampo.jpg&f=1&nofb=1&ipt=d3a1776e473c951814a9d7ca5423b43afc95294c3eef1f0f7bb0436fd0ce45d8');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .product-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, #f0fff4 0%, #e6fffa 100%);
+        }
+        
+        .rating-stars {
+            color: #f59e0b;
+        }
+        
+        .tab-active {
+            border-bottom: 3px solid #38a169;
+            font-weight: 600;
+            color: #38a169;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-seedling text-3xl text-green-600 mr-3"></i>
+                <h1 class="text-2xl font-bold text-green-800">Pin<span class="text-green-600">ion</span></h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#inicio" class="text-gray-700 hover:text-green-600 font-medium">Início</a></li>
+                    <li><a href="#tecnologias" class="text-gray-700 hover:text-green-600 font-medium">Tecnologias</a></li>
+                    <li><a href="#como-funciona" class="text-gray-700 hover:text-green-600 font-medium">Como Funciona</a></li>
+                    <li><a href="#depoimentos" class="text-gray-700 hover:text-green-600 font-medium">Depoimentos</a></li>
+                    <li><a href="#cadastro" class="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg transition duration-300">Cadastre-se</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Conectando Inovação ao Campo</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">A plataforma onde empresas testam novas tecnologias agrícolas com produtores reais e recebem feedback valioso.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="#tecnologias" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Ver Tecnologias</a>
+                <a href="#cadastro" class="bg-transparent hover:bg-white hover:text-green-800 text-white font-bold py-3 px-6 border-2 border-white rounded-lg transition duration-300">Quero Participar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-green-600 mb-2">150+</div>
+                    <p class="text-gray-700">Tecnologias testadas</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-green-600 mb-2">2.500+</div>
+                    <p class="text-gray-700">Produtores cadastrados</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-green-600 mb-2">80%</div>
+                    <p class="text-gray-700">Taxa de sucesso</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-green-600 mb-2">45</div>
+                    <p class="text-gray-700">Empresas parceiras</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="tecnologias" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Tecnologias em Teste</h2>
+                <div class="flex space-x-2">
+                    <button class="px-4 py-2 bg-green-600 text-white rounded-lg">Filtrar</button>
+                    <button class="px-4 py-2 border border-gray-300 rounded-lg">Ordenar</button>
+                </div>
+            </div>
+            
+            <!-- Tabs -->
+            <div class="border-b border-gray-200 mb-8">
+                <div class="flex space-x-8">
+                    <button class="pb-2 tab-active">Todos</button>
+                    <button class="pb-2 text-gray-600 hover:text-green-600">Sementes</button>
+                    <button class="pb-2 text-gray-600 hover:text-green-600">Fertilizantes</button>
+                    <button class="pb-2 text-gray-600 hover:text-green-600">Máquinas</button>
+                    <button class="pb-2 text-gray-600 hover:text-green-600">Softwares</button>
+                </div>
+            </div>
+            
+            <!-- Products Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fterramagna.com.br%2Fwp-content%2Fuploads%2F2021%2F08%2Fcapa-blog-20.png&f=1&nofb=1&ipt=62dad77097a7e488de1eed9a130bfee06d52ca1a7a678b8a69bf399be05578d8" alt="Semente de soja" class="w-full h-48 object-cover">
+                        <span class="absolute top-2 right-2 bg-green-600 text-white text-xs px-2 py-1 rounded-full">NOVO</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Soja Resistente PR-2023</h3>
+                            <div class="flex items-center">
+                                <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                <span>4.8</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Desenvolvida para resistir à seca e pragas comuns no Paraná</p>
+                        
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-500 text-sm">Testes em:</span>
+                                <div class="flex space-x-1 mt-1">
+                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Londrina</span>
+                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Maringá</span>
+                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">+3</span>
+                                </div>
+                            </div>
+                            <span class="text-green-600 font-bold">20 vagas</span>
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                                <i class="far fa-comment-dots mr-2"></i> 32 avaliações
+                            </button>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm">
+                                Quero testar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 2 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.agriworld-revista.com%2Fagriworld%2Fwp-content%2Fuploads%2F2021%2F06%2Fpulverizador-MF-8225-4-scaled.jpg&f=1&nofb=1&ipt=3e017baed5cdef9fc7c9180c2d25d1e711ad7c2a5a44701e97f23650bece8504" alt="Pulverizador" class="w-full h-48 object-cover">
+                        <span class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded-full">POPULAR</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Pulverizador Inteligente AG-500</h3>
+                            <div class="flex items-center">
+                                <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                <span>4.5</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Reduz em até 40% o uso de defensivos com aplicação precisa</p>
+                        
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-500 text-sm">Testes em:</span>
+                                <div class="flex space-x-1 mt-1">
+                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Cascavel</span>
+                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Toledo</span>
+                                </div>
+                            </div>
+                            <span class="text-green-600 font-bold">8 vagas</span>
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                                <i class="far fa-comment-dots mr-2"></i> 18 avaliações
+                            </button>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm">
+                                Quero testar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product Card 3 -->
+                <div class="product-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="relative">
+                        <img src="https://www.intelligentliving.co/wp-content/uploads/2020/04/teralytiic-1024x651.jpg" alt="Sensor agrícola" class="w-full h-48 object-cover">
+                        <span class="absolute top-2 right-2 bg-purple-600 text-white text-xs px-2 py-1 rounded-full">EM DESTAQUE</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">Sensor de Solo IoT</h3>
+                            <div class="flex items-center">
+                                <span class="text-yellow-500 mr-1"><i class="fas fa-star"></i></span>
+                                <span>4.9</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Monitora umidade, nutrientes e temperatura em tempo real</p>
+                        
+                        <div class="flex justify-between items-center mb-4">
+                            <div>
+                                <span class="text-gray-500 text-sm">Testes em:</span>
+                                <div class="flex space-x-1 mt-1">
+                                    <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Toda região</span>
+                                </div>
+                            </div>
+                            <span class="text-green-600 font-bold">50 vagas</span>
+                        </div>
+                        
+                        <div class="flex justify-between">
+                            <button class="text-green-600 hover:text-green-800 font-medium flex items-center">
+                                <i class="far fa-comment-dots mr-2"></i> 45 avaliações
+                            </button>
+                            <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm">
+                                Quero testar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Ver mais tecnologias
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="como-funciona" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Como Funciona</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-plus text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">1. Cadastro</h3>
+                    <p class="text-gray-600">Produtores se cadastram na plataforma informando seu perfil agrícola.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-search text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">2. Seleção</h3>
+                    <p class="text-gray-600">Empresas selecionam produtores com perfil adequado para testar suas tecnologias.</p>
+                </div>
+                
+                <div class="text-center p-6">
+                    <div class="bg-green-100 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-exchange-alt text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">3. Teste e Feedback</h3>
+                    <p class="text-gray-600">Produtores testam e avaliam as tecnologias, fornecendo feedback valioso.</p>
+                </div>
+            </div>
+            
+            <div class="mt-12 bg-gray-50 rounded-lg p-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Benefícios para Produtores</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>Acesso gratuito a tecnologias inovadoras</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>Suporte técnico durante os testes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>Descontos especiais em produtos aprovados</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>Participação em eventos exclusivos</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Benefícios para Empresas</h3>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>Feedback real de produtores</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>Dados de desempenho em diferentes condições</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>Validação de mercado antes do lançamento</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-600 mt-1 mr-2"></i>
+                                <span>Relatórios detalhados de testes</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="depoimentos" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">O que dizem sobre nós</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card rounded-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="rating-stars mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-sm text-gray-600">Há 1 mês</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Testei um novo fertilizante através da plataforma e aumentei minha produtividade em 15%. O suporte técnico foi excelente e pude dar sugestões que foram realmente implementadas no produto final."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="João Silva" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">João Silva</h4>
+                            <p class="text-sm text-gray-600">Produtor de soja - Londrina/PR</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card rounded-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="rating-stars mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-sm text-gray-600">Há 3 semanas</span>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Como empresa, a Pinion nos proporcionou acesso a produtores reais que testaram nosso software de gestão. Os feedbacks foram essenciais para ajustar o produto antes do lançamento oficial."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Souza" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">Ana Souza</h4>
+                            <p class="text-sm text-gray-600">CEO Pinion Solutions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration -->
+    <section id="cadastro" class="py-16 bg-green-700 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Participe da Comunidade</h2>
+                <p class="text-xl mb-8">Junte-se a centenas de produtores e empresas que estão transformando a agricultura através da inovação colaborativa.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                    <div class="bg-white text-gray-800 rounded-lg p-8 shadow-lg">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-user-tie text-3xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Sou Produtor</h3>
+                        <p class="text-gray-600 mb-6">Quero testar novas tecnologias e dar meu feedback para melhorá-las.</p>
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Cadastrar como Produtor
+                        </button>
+                    </div>
+                    
+                    <div class="bg-white text-gray-800 rounded-lg p-8 shadow-lg">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-building text-3xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Sou Empresa</h3>
+                        <p class="text-gray-600 mb-6">Quero lançar meus produtos para teste e receber feedback de produtores.</p>
+                        <button class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Cadastrar como Empresa
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">Perguntas Frequentes</h2>
+            
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 hover:bg-gray-50">
+                        <span>Como são selecionados os produtores para os testes?</span>
+                        <i class="fas fa-chevron-down text-green-600"></i>
+                    </button>
+                    <div class="p-4 bg-gray-50 text-gray-600 hidden">
+                        As empresas definem os critérios necessários para testar cada tecnologia (tamanho da propriedade, cultivos, região, etc.). Nossa plataforma faz o match automático com produtores cadastrados que atendam a esses requisitos.
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 hover:bg-gray-50">
+                        <span>Quanto custa participar como produtor?</span>
+                        <i class="fas fa-chevron-down text-green-600"></i>
+                    </button>
+                    <div class="p-4 bg-gray-50 text-gray-600 hidden">
+                        A participação é totalmente gratuita para produtores. As tecnologias são fornecidas sem custo durante o período de teste, e em muitos casos, os produtores que participam recebem condições especiais caso decidam adquirir o produto depois.
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 hover:bg-gray-50">
+                        <span>Quanto tempo dura um teste?</span>
+                        <i class="fas fa-chevron-down text-green-600"></i>
+                    </button>
+                    <div class="p-4 bg-gray-50 text-gray-600 hidden">
+                        O período varia conforme o tipo de tecnologia. Testes de sementes geralmente acompanham todo um ciclo produtivo (3-6 meses), enquanto equipamentos podem ser testados por 1-3 meses. A duração é sempre definida claramente antes do início.
+                    </div>
+                </div>
+                
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-4 text-left font-medium text-gray-800 hover:bg-gray-50">
+                        <span>Como é garantida a qualidade dos produtos testados?</span>
+                        <i class="fas fa-chevron-down text-green-600"></i>
+                    </button>
+                    <div class="p-4 bg-gray-50 text-gray-600 hidden">
+                        Todas as empresas parceiras passam por uma curadoria rigorosa. Além disso, produtos em fase de teste já devem ter passado por todas as aprovações regulatórias necessárias. A plataforma também monitora os feedbacks e pode suspender testes em caso de problemas.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h3 class="text-xl text-center text-gray-600 mb-8">Parceiros e Apoiadores</h3>
+            <div class="flex flex-wrap justify-center items-center gap-8">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c0/Embrapa.svg" alt="Embrapa" class="h-12 opacity-70 hover:opacity-100 transition duration-300">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Marca-FAEP.png" alt="FAEP" class="h-12 opacity-70 hover:opacity-100 transition duration-300">
+                <img src="https://www.idrparana.pr.gov.br/sites/iapar/arquivos_restritos/files/imagem/2023-08/logo_gov_seab_v.png" alt="SEAB" class="h-12 opacity-70 hover:opacity-100 transition duration-300">
+                <img src="https://www.fondazionesocialventuregda.it/wp-content/uploads/2022/03/agro3.png" alt="Agrorobótica" class="h-12 opacity-70 hover:opacity-100 transition duration-300">
+                <img src="https://via.placeholder.com/150x80?text=AGROSTART" alt="Agrostart" class="h-12 opacity-70 hover:opacity-100 transition duration-300">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-seedling text-2xl text-green-500 mr-3"></i>
+                        <h3 class="text-xl font-bold">Pinion</h3>
+                    </div>
+                    <p class="text-gray-400">Conectando inovação agrícola aos produtores do Paraná desde 2018.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Tecnologias em teste</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Para produtores</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Para empresas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-green-500"></i>
+                            <span>contato@pinion.com.br</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-green-500"></i>
+                            <span>(41) 4002-8922</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-green-500"></i>
+                            <span>Campo Mourão - PR</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="bg-gray-800 hover:bg-gray-700 w-10 h-10 rounded-full flex items-center justify-center">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <p class="text-sm text-gray-400">Assine nossa newsletter:</p>
+                        <div class="flex mt-2">
+                            <input type="email" placeholder="Seu e-mail" class="bg-gray-800 text-white px-4 py-2 rounded-l focus:outline-none w-full">
+                            <button class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-r">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 Pinion. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('button.md\\:hidden').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('block');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('bg-white');
+            nav.classList.toggle('w-full');
+            nav.classList.toggle('left-0');
+            nav.classList.toggle('p-4');
+            nav.classList.toggle('shadow-md');
+            nav.classList.toggle('z-50');
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.querySelectorAll('.border button').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                
+                if (content.classList.contains('hidden')) {
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                } else {
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                }
+            });
+        });
+
+        document.querySelectorAll('.border-b button').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.border-b button').forEach(t => {
+                    t.classList.remove('tab-active');
+                    t.classList.add('text-gray-600', 'hover:text-green-600');
+                });
+
+                tab.classList.add('tab-active');
+                tab.classList.remove('text-gray-600', 'hover:text-green-600');
+            });
+        });
+    </script>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made by Santiago</a></p></body>
+</html>
